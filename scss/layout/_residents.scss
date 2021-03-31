@@ -1,0 +1,49 @@
+.residents{
+    .residents-body{
+        background-color: $color-black-1;
+        padding-top: 20px;
+        h2{
+            @include styleText($color-while-0,$fs-30 + $fs-10,$fw-normal,$lh-0);
+            margin: 20px 0 10px;
+        }
+        p{
+            @include styleText($color-while-0,$fs-normal,$fw-normal,$lh-0);
+            margin: 0;
+            a{
+                text-decoration: underline;
+            }
+        }
+    }
+    .residents-search{
+        padding-top: 35px;
+        padding-bottom: 35px;
+        background-color: #333;
+        @include styleText($color-while-0,$fs-normal,$fw-normal,$lh-0);
+        input{
+            background-color: #333;
+            border-color: #333;
+            @include styleText($color-while-0,$fs-20 + 4,$fw-normal,$lh-0);
+            &:focus{
+                box-shadow: none;
+            }
+        }
+        .residents-search-right{
+            flex-wrap: wrap;
+            span{
+                padding-right: 5px;
+            }
+            ul{
+                li{
+                    margin: 0 5px;
+                    a{
+                        color:rgba(255, 255, 255, 0.712);
+                        white-space: nowrap;
+                        &:hover{
+                            color:white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

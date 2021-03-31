@@ -1,0 +1,64 @@
+.intro{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,1fr);
+    width: 100%;
+    img{    
+        transition: all .5s;
+    }
+    .intro-1, .intro-2, .intro-3, .intro-4 ,.intro-5{
+        overflow: hidden;
+    }
+    .intro-0{
+        grid-column: 1 / span 3;
+        overflow: hidden;
+    }
+    .intro-6{
+        grid-column: 1 / span 2 ;
+        grid-row: 2 / span 2;
+        overflow: hidden;
+    }
+    .intro-content{
+        bottom: 0;
+        background-color: $color-blue-1-7;
+        .intro-text{
+            @include styleText($color-while-0,$fs-10 + 2,$fw-normal,$lh-0);
+        }
+        .intro-text-6{
+            @include styleText($color-while-0,$fs-20 + 1,$fw-normal,$lh-0);
+        }
+        .fa-6{
+            border: 1px solid $color-while-0;
+            border-radius: 50%;
+            color: $color-while-0;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+        }
+        .fa{
+            border: 1px solid $color-while-0;
+            border-radius: 50%;
+            color: $color-while-0;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 28px;
+        }
+    }
+}
+//responsiver
+@include resposive("medium"){
+    .intro{
+        display: block;
+        .intro-0{
+            h2{
+                margin: 20px 0 10px;
+                padding: 30px 0;
+            }
+            p{
+                display: none;
+            }
+        }
+    }
+}

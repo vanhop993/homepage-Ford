@@ -1,0 +1,41 @@
+//màu
+$color-while-0:#ffffff;
+$color-while-1: rgba(255, 255, 255, 0.705);
+$color-gray-1:#f3f3f3;
+$color-gray-2:#fafafa;
+$color-gray-3:#767676;
+$color-blue-1:#0276b3;
+$color-blue-1-7:#0275b3bd;
+$color-blue-2:#37A9E8;
+$color-black-0:#333;
+$color-black-1:#102b4e;
+$color-black-2:#1B394E;
+$color-black-3:#242424;
+$color-red-0:rgb(217, 46, 20);
+$color-tran: transparent;
+
+//fs
+$fs-normal:normal;
+$fs-10:10px;
+$fs-15:15px;
+$fs-20:20px;
+$fs-30:30px;
+
+//fw
+$fw-normal:normal;
+$fw-100:100;
+
+//line-height
+$lh-0:1.428;
+
+//padding
+$pd-15:15px;
+$pd-20:20px;
+
+//break points
+$breakpoints:(
+    'extra-large': 1200px,
+    'large' : 992px,
+    'medium' : 768px,
+    'small' : 576px,
+);

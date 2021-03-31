@@ -1,0 +1,48 @@
+.recalls{
+    .recalls-top{
+        background-color: #f7f7f7;
+        h2{
+            @include styleText($color-red-0,$fs-30 + $fs-10,$fs-normal,$lh-0);
+        }
+        p{
+            padding: 0;
+            padding-top: 40px;
+        }
+    }
+    .recalls-bottom{
+        .recalls-bottom-btn-container{
+            padding: 30px 20px;
+            margin:0;
+            .recalls-bottom-btn.collapsed{
+                .recalls-bottom-down{
+                    display: inline-block;
+                }
+                .recalls-bottom-up{
+                    top: 0;
+                    left: 0;
+                    display: none;
+                }
+            }
+            .recalls-bottom-btn{
+                .recalls-bottom-down{
+                    display: none;
+                }
+                .recalls-bottom-up{
+                    top: 0;
+                    left: 0;
+                    display: inline-block;
+                }
+            } 
+        }
+        .recalls-bottom-body{
+            background-color: #f7f7f7;
+            padding: 0;
+        }
+        ul{
+            padding: 40px 45px;
+            max-height: 240px;
+            overflow-y: scroll;
+            @include styleText($color-black-0,$fs-10 + 2,$fw-normal,$lh-0);
+        }
+    }
+}

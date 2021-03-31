@@ -1,0 +1,22 @@
+.backToTop{
+    position: fixed;
+    z-index: 9999;
+    bottom: 10%;
+    right: 3%;
+    font-size: 25px;
+    padding: 10px 19px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.411);
+    color: $color-while-0;
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+    &:hover{
+        background-color: rgba(0, 0, 0, 0.226);
+    }
+}
+
+.cd-top--is-visible {
+    visibility: visible;
+    opacity: 1;
+}

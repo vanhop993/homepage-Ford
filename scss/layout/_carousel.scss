@@ -1,0 +1,36 @@
+.carousel-main{
+    .carousel-title{
+        background-color: black;
+        width: 100%;
+        min-height: 111px;
+        padding: 10px 0;
+        @include styleText($color-while-0,$fs-15 + 1,$fw-normal,$lh-0);
+        .carousel-title-1{
+            padding-bottom: 25px;
+            span{
+                width: 40%;
+            }
+        }
+        .carousel-title-learn{
+            span{
+                a{
+                    @include styleText($color-blue-2,$fs-15 + 1,$fw-normal,$lh-0);
+                    text-decoration: underline;
+                    &:hover{
+                        @include styleText($color-blue-2,$fs-15 + 1,$fw-normal,$lh-0);
+                    }
+                }
+            }
+        }
+    }
+}
+//resposive
+@include resposive('small'){
+    .carousel-main{
+        .carousel-caption{
+            h1{
+                font-size: 22px;
+            }
+        }
+    }
+}

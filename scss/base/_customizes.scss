@@ -1,0 +1,294 @@
+//sửa thuộc tính boostrap
+.container-fluid{
+    padding: 0 45px;
+}
+//sưa thuộc tính boostrap cho header__middle
+.header__middle{
+    .navbar-light{
+        width: 100%;
+        padding:0;
+        .navbar-nav {
+            .nav-items{
+                .nav-link {
+                    @include styleText($color-black-1,$fs-15 + 1,$fw-normal,$lh-0);
+                    
+                }
+                .nav-link.collapsed{
+                    @include styleText($color-blue-1,$fs-15 + 1,$fw-normal,$lh-0); 
+                   
+                }
+            }
+            .nav-link {
+                @include styleText($color-blue-1,$fs-15 + 1,$fw-normal,$lh-0);
+                .right__menu-icon{
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    .dropdown-toggle::after{
+        display: none;
+    }
+}
+@include resposive('small'){
+    header{
+        .container-fluid{
+            padding: 0 20px;
+        }
+    }
+}
+
+//sửa thuộc tính để đổi chiều mũi tên của phần .header__menu-responsive
+.header__menu-responsive-second{
+    .btn-link{
+        .angle-up-1{
+            display: block;
+        }
+        .angle-down-1{
+            display: none;
+        }
+    }
+    .btn-link.collapsed{
+        .angle-up-1{
+            display: none;
+        }
+        .angle-down-1{
+            display: block;
+        }
+    }
+    .col-2{
+        padding-right: 0;
+    }
+    .dropdown-item{
+        background-color: $color-while-0;
+        &:hover{
+            background-color: $color-while-0;
+        }
+    }
+}
+//sửa thuộc tính card boostrap cho header
+.card{
+    border:none;
+    padding: 25px 20px;
+    .card-body{
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        .card-img-top{
+            width: 140px;
+        }
+        h5{
+            @include styleText($color-blue-2,$fs-15 + 1,$fw-100,$lh-0);
+            margin: 0;
+        }
+        .card-text{
+            @include styleText($color-black-0,$fs-15 + 1,$fw-100,$lh-0);
+            white-space: nowrap;
+            sup{
+                color: $color-blue-2;
+            }
+        }
+    }
+}
+//sửa thuộc tính dropdown cho header
+.header__middle{
+    .dropdown .dropdown-menu{
+        right: 0;
+        left: auto;
+    }
+    .modal{
+        .modal-content{
+            border:none;
+            .modal-header{
+                border:none
+            }
+            .modal-body{
+                border: none;
+            }
+            .modal-footer{
+                border:none;
+            }
+        }
+    }
+}
+//sửa thuộc tính modal cho header
+.modal-backdrop.show{
+    opacity: 0.9;
+}
+//sửa thuộc tính cho header__responsive-second 
+.header__menu-responsive-second{
+    .nav-link.active{
+        border-left: 1px solid $color-gray-3;
+        border-top: 1px solid $color-gray-3 !important;
+        border-right: none !important;
+        border-bottom: 1px solid $color-gray-3;
+        color:$color-black-1 !important;
+    }  
+    .dropdown-item.active, .dropdown-item:active{
+        background-color: $color-while-0;
+    }
+}
+//sửa thuộc tính cho phần carousel-main
+.carousel-main{
+    .carousel-control-next, .carousel-control-prev{
+        width: 5%;
+        height: 10%;
+        top:50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.699);
+        &:hover{
+            background-color: white;  
+            border: 1px solid $color-blue-2;
+            color: $color-blue-2;
+        }
+        .angle{
+            font-size: 40px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        
+    }
+    .carousel-indicators li{
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        color: $color-while-0;
+        border: 3px solid transparent;
+    }
+    .carousel-indicators{
+        .active{
+            border: 3px solid white;
+            background-color: transparent;
+        }
+    }
+    .carousel-caption{
+        top:0;
+        left: 5%;
+        text-align: left;
+        width: 90%;
+        h1{
+            width: 85%;
+            color:$color-black-2;
+        }
+        &:hover{
+            .button-carousel-1{
+                @include styleButton($color-while-0,$pd-15 $pd-20);
+                color: $color-blue-2;
+            }
+        }
+    }
+    .carousel-inner{
+        a{
+            text-decoration: none;
+        }
+        .btn-style-3{
+            width: 270px;
+            display: block;
+            text-align: center;
+        }
+        .button-carousel-2{
+            top:35%;
+        }
+    }
+}
+//responsive cho phần carousel
+@include resposive('medium'){
+    .carousel-main{
+        .carousel-inner{
+            h1{
+                width: 100%;
+                text-align: center;
+                font-size: 30px;
+            }
+        }
+        .button-carousel-2{
+            top:35%;
+        }
+    }
+}
+@include resposive('large'){
+    .carousel-main{
+        .carousel-control-next, .carousel-control-prev{
+            height: 5%;
+        }
+        .carousel-inner{
+            .button-carousel-2{
+                top:55%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+        }
+        
+    }
+}
+
+//sửa thuộc tính cho owl-carousel phần pick
+.pick{
+    .owl-carousel{
+        .owl-item{
+            img{
+                width: 80%;
+                margin:auto;
+            }
+        }
+    }
+}
+//sửa thuộc tính nav cho phần intro
+.intro{
+    nav{
+        .navbar-toggler.collapsed{
+            padding: 15px 0;
+            @include styleText($color-while-0,$fs-20 + 4,$fw-normal,$lh-0);
+            border-radius: 0;
+            background-color: $color-blue-1;
+            span{
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                line-height: 17px;
+                border: 1px solid $color-while-0;
+                border-radius: 50%;
+                text-align: center;
+            }
+            .intro-open{
+                display: block;
+            }
+            .intro-close{
+                display: none;
+            }
+            &:focus{
+                border:none;
+                border-radius: 0;
+                outline: none;
+            }
+        }
+        .navbar-toggler{
+            padding: 15px 0;
+            @include styleText($color-while-0,$fs-20 + 4,$fw-normal,$lh-0);
+            border-radius: 0;
+            background-color: $color-blue-1;
+            span{
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                line-height: 17px;
+                border: 1px solid $color-while-0;
+                border-radius: 50%;
+                text-align: center;
+            }
+            .intro-open{
+                display: none;
+            }
+            .intro-close{
+                display: block;
+            }
+            &:focus{
+                border:none;
+                border-radius: 0;
+                outline: none;
+            }
+        }
+    }
+}
+//end phần intro

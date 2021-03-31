@@ -1,0 +1,36 @@
+.promise{
+    .promise-top{
+        background-color: $color-blue-1;
+        .promise-left,.promise-right{
+            margin-bottom: 20px;
+            h2{
+                margin: 20px 0 10px;
+                color: $color-while-0;
+            }
+            p{
+                @include styleText($color-while-0,$fs-15 + 1,$fs-normal,$lh-0);
+                padding-top:10px;
+                margin-bottom: 20px;
+            }
+            a{
+                text-decoration: none;
+                display: block;
+                margin: auto;
+                width: 270px;
+            }
+        }
+    } 
+    .promise-bottom{
+        a{
+            text-decoration: underline;
+            font-size: 12px;
+            padding: 0;
+        }
+    }
+}
+//responsive
+@include resposive('medium'){
+    .promise-top{
+        flex-wrap: wrap;
+    }
+}
